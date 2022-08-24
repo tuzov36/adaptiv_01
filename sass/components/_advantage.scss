@@ -1,0 +1,89 @@
+.section-advantage {
+  color: $primery-text-color;
+  background-color: $primery-bcg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.advantage {
+  list-style: none;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.advantage__item {
+  margin-bottom: 30px;
+
+  &::before {
+    content: "";
+    margin-bottom: 30px;
+    display: block;
+    height: 120px;
+    background-color: $employees-bcg-color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    @media screen and (min-width: 1200px) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4);
+    margin-right: $card-set-gap;
+    margin-bottom: 0;
+  }
+}
+
+.icon__antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.icon__clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon__diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon__astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
+.advantage__title {
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.advantage__text {
+  font-size: 14px;
+  line-height: 1.71;
+}
